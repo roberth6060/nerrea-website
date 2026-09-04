@@ -1,11 +1,15 @@
 import "./App.css";
+import Home from "./pages/Home/Home";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <section className="hero">
-      <h1>Welcome to Nerrea</h1>
-      <p>My awesome React app.</p>
-    </section>
+    <>
+      <Navbar />
+      <Home />
+      <Footer />
+    </>
   );
 }
 
