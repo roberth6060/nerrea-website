@@ -1,10 +1,11 @@
 import "./Footer.css";
+import { FooterContainer } from "./Footer-style";
 
 function Footer() {
   return (
-    <footer className="footer">
-      <p>&copy; 2023 Nerrea. All rights reserved.</p>
-    </footer>
+    <FooterContainer>
+      <p>&copy; 2026 Nerrea. All rights reserved.</p>
+    </FooterContainer>
   );
 }
 

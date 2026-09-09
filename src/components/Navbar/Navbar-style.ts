@@ -7,6 +7,7 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavbarContent = styled.nav`
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 1.5rem;

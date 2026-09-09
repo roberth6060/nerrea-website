@@ -17,7 +17,7 @@ function Navbar() {
   return (
     <NavbarContainer>
       <NavbarContent>
-        <NavbarBrand>
+        <NavbarBrand href="/">
           <img src={logo} alt="Nerrea" />
         </NavbarBrand>
 
