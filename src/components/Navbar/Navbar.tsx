@@ -1,4 +1,10 @@
-import "./Navbar.css";
+import {
+  NavbarContainer,
+  NavbarContent,
+  NavbarBrand,
+  NavbarLinks,
+} from "./Navbar-style";
+import logo from "../../assets/images/Logo.png";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -9,21 +15,21 @@ const navItems = [
 
 function Navbar() {
   return (
-    <header className="navbar">
-      <nav className="navbar__content" aria-label="Main navigation">
-        <a className="navbar__brand" href="/">
-          NEbRREA
-        </a>
+    <NavbarContainer>
+      <NavbarContent>
+        <NavbarBrand>
+          <img src={logo} alt="Nerrea" />
+        </NavbarBrand>
 
-        <ul className="navbar__links">
+        <NavbarLinks>
           {navItems.map((item) => (
             <li key={item.label}>
               <a href={item.href}>{item.label}</a>
             </li>
           ))}
-        </ul>
-      </nav>
-    </header>
+        </NavbarLinks>
+      </NavbarContent>
+    </NavbarContainer>
   );
 }
 
