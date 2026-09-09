@@ -5,11 +5,14 @@ import {
   NavbarLinks,
 } from "./Navbar-style";
 import logo from "../../assets/images/Logo.png";
+import { NavLink } from "react-router-dom";
 
 const navItems = [
   { label: "Home", href: "/" },
+  { label: "Administrative Help", href: "/administrative-help" },
+  { label: "Workforce", href: "/workforce" },
+  { label: "Digital Marketing", href: "/digital-marketing" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -24,7 +27,9 @@ function Navbar() {
         <NavbarLinks>
           {navItems.map((item) => (
             <li key={item.label}>
-              <a href={item.href}>{item.label}</a>
+              <NavLink to={item.href} end={item.href === "/"}>
+                {item.label}
+              </NavLink>
             </li>
           ))}
         </NavbarLinks>

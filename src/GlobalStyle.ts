@@ -66,11 +66,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-size: clamp(2.25rem, 5vw, 4rem);
+    font-size: 3rem;
   }
 
   h2 {
-    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-size: 2rem;
   }
 
   p {

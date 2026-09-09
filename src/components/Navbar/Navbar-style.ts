@@ -48,4 +48,9 @@ export const NavbarLinks = styled.ul`
     background-color: #0074e8;
     color: #ffffff;
   }
+
+  a.active {
+    background-color: #0061c6;
+    color: #ffffff;
+  }
 `;
