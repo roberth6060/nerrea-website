@@ -31,4 +31,26 @@ export const NavbarLinks = styled.ul`
   align-items: center;
   gap: 1rem;
   list-style: none;
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    color: #374151;
+    text-decoration: none;
+    font-weight: 500;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  a:hover {
+    background-color: #0074e8;
+    color: #ffffff;
+    border-radius: 6px;
+  }
 `;
