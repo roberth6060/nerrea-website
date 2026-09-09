@@ -12,7 +12,7 @@ function Navbar() {
     <header className="navbar">
       <nav className="navbar__content" aria-label="Main navigation">
         <a className="navbar__brand" href="/">
-          NERREA
+          NEbRREA
         </a>
 
         <ul className="navbar__links">
