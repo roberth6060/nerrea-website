@@ -1,11 +1,10 @@
-import "./WhyNerrea.css";
-
-function WhyNerrea() {
+const WhyNerrea = () => {
   return (
     <section>
-      <h1>Why Nerrea?</h1>
+      <h1>About NERREA</h1>
+      <p>Your virtual assistant for business.</p>
     </section>
   );
-}
+};
 
 export default WhyNerrea;

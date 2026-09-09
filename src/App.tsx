@@ -1,15 +1,13 @@
-import "./App.css";
-import Home from "./pages/Home/Home";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
+import { Suspense } from "react";
+import Routes from "./routes/Routes";
+import GlobalStyle from "./GlobalStyle";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Home />
-      <Footer />
-    </>
+    <Suspense fallback={<p>Loading...</p>}>
+      <GlobalStyle />
+      <Routes />
+    </Suspense>
   );
 }
 
