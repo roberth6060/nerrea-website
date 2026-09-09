@@ -7,12 +7,10 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavbarContent = styled.nav`
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 1.5rem;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 `;
@@ -22,8 +20,6 @@ export const NavbarBrand = styled.a`
   align-items: center;
   img {
     width: 140px;
-    height: auto;
-    display: block;
   }
 `;
 
@@ -42,7 +38,6 @@ export const NavbarLinks = styled.ul`
     padding: 0.5rem 0.75rem;
     border-radius: 6px;
     color: #374151;
-    text-decoration: none;
     font-weight: 500;
     transition:
       background-color 0.2s ease,
@@ -52,6 +47,5 @@ export const NavbarLinks = styled.ul`
   a:hover {
     background-color: #0074e8;
     color: #ffffff;
-    border-radius: 6px;
   }
 `;

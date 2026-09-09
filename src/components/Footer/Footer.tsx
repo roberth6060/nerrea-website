@@ -1,4 +1,3 @@
-import "./Footer.css";
 import { FooterContainer } from "./Footer-style";
 
 function Footer() {

@@ -5,8 +5,6 @@ import {
   NavbarLinks,
 } from "./Navbar-style";
 import logo from "../../assets/images/Logo.png";
-import { Fragment } from "react/jsx-runtime";
-import { Outlet } from "react-router-dom";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -17,24 +15,21 @@ const navItems = [
 
 function Navbar() {
   return (
-    <Fragment>
-      <NavbarContainer>
-        <NavbarContent>
-          <NavbarBrand href="/">
-            <img src={logo} alt="Nerrea" />
-          </NavbarBrand>
+    <NavbarContainer>
+      <NavbarContent>
+        <NavbarBrand href="/">
+          <img src={logo} alt="Nerrea" />
+        </NavbarBrand>
 
-          <NavbarLinks>
-            {navItems.map((item) => (
-              <li key={item.label}>
-                <a href={item.href}>{item.label}</a>
-              </li>
-            ))}
-          </NavbarLinks>
-        </NavbarContent>
-      </NavbarContainer>
-      <Outlet />
-    </Fragment>
+        <NavbarLinks>
+          {navItems.map((item) => (
+            <li key={item.label}>
+              <a href={item.href}>{item.label}</a>
+            </li>
+          ))}
+        </NavbarLinks>
+      </NavbarContent>
+    </NavbarContainer>
   );
 }
 

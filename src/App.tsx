@@ -1,11 +1,12 @@
 import { Suspense } from "react";
-import "./App.css";
 import Routes from "./routes/Routes";
+import GlobalStyle from "./GlobalStyle";
 
 function App() {
   return (
     <Suspense fallback={<p>Loading...</p>}>
-      <Routes />;
+      <GlobalStyle />
+      <Routes />
     </Suspense>
   );
 }
