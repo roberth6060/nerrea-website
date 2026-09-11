@@ -1,6 +1,7 @@
 export type HeroImage = {
   desktop: string;
   mobile?: string;
+  src: string;
   alt: string;
 };
 
