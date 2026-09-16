@@ -1,10 +1,26 @@
+import Hero from "../../components/Hero/hero";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
+import { HomePageContainter } from "./Home.style";
+import heroDesktop from "../../assets/images/HeroImg/Desktop.jpg";
+import heroMobile from "../../assets/images/HeroImg/Mobile.jpg";
 
 const Home = () => {
   return (
-    <section className="home">
-      <h1>Welcome to Nerrea</h1>
-      <p>My Home page.</p>
+    <HomePageContainter>
+      <Hero
+        heading="Your virtual assistant for business"
+        supportingText="Administrative, workforce and digital support."
+        ctas={[
+          { label: "Our services", href: "#services" },
+          { label: "Contact us", href: "/contact" },
+        ]}
+        image={{
+          desktop: heroDesktop,
+          mobile: heroMobile,
+          src: heroDesktop,
+          alt: "Professionals working together in a bright office",
+        }}
+      />
       <ServiceCard
         name="Workforce"
         description="Support with recruitment, permits, visas, and training."
@@ -15,7 +31,7 @@ const Home = () => {
           alt: "Professionals working together",
         }}
       />
-    </section>
+    </HomePageContainter>
   );
 };
 
