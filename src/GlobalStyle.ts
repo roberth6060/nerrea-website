@@ -11,6 +11,15 @@ const GlobalStyle = createGlobalStyle`
     --color-border: #dbe5ef;
   }
 
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+  flex: 1;
+  }
+
   *,
   *::before,
   *::after {
@@ -24,6 +33,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     min-width: 320px;
+    min-height: 100vh;
+    flex-direction: column;
     background-color: var(--color-background);
     color: var(--color-text);
     font-family: "Inter", "Segoe UI", sans-serif;
