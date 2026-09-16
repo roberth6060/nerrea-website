@@ -24,3 +24,9 @@ export const ServiceCardImage = styled.img`
   min-height: 260px;
   object-fit: cover;
 `;
+
+export const ServiceContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
