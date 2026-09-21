@@ -28,12 +28,14 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
   }
 
   body {
     margin: 0;
     min-width: 320px;
     min-height: 100vh;
+    display: flex;
     flex-direction: column;
     background-color: var(--color-background);
     color: var(--color-text);

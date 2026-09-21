@@ -9,7 +9,3 @@ export const Section = styled.section`
   margin: 0 auto;
   padding: clamp(3rem, 8vw, 7rem) 0;
 `;
-
-export const HeroSection = styled(Section)`
-  display: grid;
-`;

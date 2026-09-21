@@ -1,13 +1,13 @@
 import Hero from "../../components/Hero/hero";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
-import { HomePageContainer, HeroSection, Section } from "./Home.style";
+import { HomePageContainer, Section } from "./Home.style";
 import heroDesktop from "../../assets/images/HeroImg/Desktop.jpg";
 import heroMobile from "../../assets/images/HeroImg/Mobile.jpg";
 
 const Home = () => {
   return (
     <HomePageContainer>
-      <HeroSection>
+      <Section>
         <Hero
           heading="Your virtual assistant for business"
           supportingText="Administrative, workforce and digital support."
@@ -22,7 +22,7 @@ const Home = () => {
             alt: "Professionals working together in a bright office",
           }}
         />
-      </HeroSection>
+      </Section>
 
       <Section id="services">
         <ServiceCard
