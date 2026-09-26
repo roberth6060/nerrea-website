@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     --color-background: #ffffff;
     --color-surface: #f4f8fc;
     --color-border: #dbe5ef;
+    --platform-mobile: 768px;
   }
 
   #root {

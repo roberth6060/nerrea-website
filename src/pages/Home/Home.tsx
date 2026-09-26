@@ -3,6 +3,24 @@ import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import { HomePageContainer, Section } from "./Home.style";
 import heroDesktop from "../../assets/images/HeroImg/Desktop.jpg";
 import heroMobile from "../../assets/images/HeroImg/Mobile.jpg";
+import { href } from "react-router-dom";
+
+// Services displayed on the home page, including their descriptions and links
+const services = [
+  {
+    name: "Admistrative Help",
+    descreiption:
+      "HR services, accounting and customer support for smoother everyday operations",
+    href: "/administrative-help",
+  },
+  {
+    name: "Workforce",
+    descreiption:
+      "Recruiting, work permits, visas, accreditation, training and rent-a-worker support.",
+  },
+];
+
+// Key benefits displayed on the home page
 
 const Home = () => {
   return (
@@ -25,16 +43,18 @@ const Home = () => {
       </Section>
 
       <Section id="services">
-        <ServiceCard
-          name="Workforce"
-          description="Support with recruitment, permits, visas, and training."
-          href="/workforce"
-          linkLabel="Explore Workforce"
-          img={{
-            src: "https://images.unsplash.com/photo-1590650265179-7e13941e93f8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            alt: "Professionals working together",
-          }}
-        />
+        {services.map((service) => (
+          <ServiceCard
+            name={service.name}
+            description={service.descreiption}
+            href={service.href}
+            linkLabel="Explore"
+            img={{
+              src: "https://images.unsplash.com/photo-1590650265179-7e13941e93f8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+              alt: "Professionals working together",
+            }}
+          />
+        ))}
       </Section>
     </HomePageContainer>
   );
