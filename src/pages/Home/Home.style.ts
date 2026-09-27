@@ -13,3 +13,5 @@ export const Section = styled.section`
     width: min(100% - 2rem, 1200px);
   }
 `;
+
+export const SectionHeader = styled.div;

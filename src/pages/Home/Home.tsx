@@ -1,9 +1,7 @@
 import Hero from "../../components/Hero/hero";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import { HomePageContainer, Section } from "./Home.style";
-import heroDesktop from "../../assets/images/HeroImg/Desktop.jpg";
-import heroMobile from "../../assets/images/HeroImg/Mobile.jpg";
-import { href } from "react-router-dom";
+import heroImage from "../../assets/images/heroimage.jpg";
 
 // Services displayed on the home page, including their descriptions and links
 const services = [
@@ -34,9 +32,7 @@ const Home = () => {
             { label: "Contact us", href: "/contact" },
           ]}
           image={{
-            desktop: heroDesktop,
-            mobile: heroMobile,
-            src: heroDesktop,
+            src: heroImage,
             alt: "Professionals working together in a bright office",
           }}
         />

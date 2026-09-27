@@ -25,10 +25,7 @@ const Hero = ({ heading, supportingText, ctas = [], image }: HeroProps) => {
 
       {image && (
         <HeroPicture>
-          {image.mobile && (
-            <source media="(max-width: 768px)" srcSet={image.mobile} />
-          )}
-          <HeroImage src={image.desktop} alt={image.alt} />
+          <HeroImage src={image.src} alt={image.alt} />
         </HeroPicture>
       )}
     </HeroContainer>
