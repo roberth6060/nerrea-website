@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ServiceCardContainer = styled.article`
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-columns: 1fr;
   width: min(100% - 2rem, 920px);
   margin: 2rem auto;
   overflow: hidden;

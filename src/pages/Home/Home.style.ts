@@ -15,3 +15,7 @@ export const Section = styled.section`
 `;
 
 export const SectionHeader = styled.div;
+export const ServiceGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+`;
