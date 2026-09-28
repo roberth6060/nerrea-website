@@ -1,6 +1,14 @@
 import Hero from "../../components/Hero/hero";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
-import { HomePageContainer, Section, ServiceGrid } from "./Home.style";
+import {
+  HomePageContainer,
+  Section,
+  SectionEyebrow,
+  SectionHeader,
+  SectionSubtitle,
+  ServiceGrid,
+  Divider,
+} from "./Home.style";
 import heroImage from "../../assets/images/heroimage.jpg";
 import servicesHelpImage from "../../assets/images/Services-Help.jpg";
 import servicesServicesWorkforce from "../../assets/images/Services-Workforce.jpg";
@@ -52,6 +60,13 @@ const Home = () => {
       </Section>
 
       <Section id="services">
+        <SectionHeader>
+          <SectionEyebrow>Our Services</SectionEyebrow>
+          <Divider />
+          <SectionSubtitle>
+            Everything your business needs in one place.
+          </SectionSubtitle>
+        </SectionHeader>
         <ServiceGrid>
           {services.map((service) => (
             <ServiceCard
@@ -59,7 +74,7 @@ const Home = () => {
               name={service.name}
               description={service.descreiption}
               href={service.href}
-              linkLabel="Explore"
+              linkLabel="Learn More"
               img={{
                 src: service.src,
                 alt: `${service.name} service image`,
