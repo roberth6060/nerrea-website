@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const NavbarContainer = styled.div`
-  width: 1200px;
+  width: 100%;
   border-bottom: 1px solid #e5e7eb;
-  margin: 0 auto;
 `;
 
 export const NavbarContent = styled.nav`

@@ -9,6 +9,16 @@ const GlobalStyle = createGlobalStyle`
     --color-background: #ffffff;
     --color-surface: #f4f8fc;
     --color-border: #dbe5ef;
+    --platform-mobile: 768px;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+  flex: 1;
   }
 
   *,
@@ -19,11 +29,15 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
   }
 
   body {
     margin: 0;
     min-width: 320px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background-color: var(--color-background);
     color: var(--color-text);
     font-family: "Inter", "Segoe UI", sans-serif;
@@ -67,6 +81,7 @@ const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-size: 3rem;
+    text-align: center;
   }
 
   h2 {
