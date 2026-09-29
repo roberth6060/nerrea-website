@@ -8,6 +8,10 @@ import {
   SectionSubtitle,
   ServiceGrid,
   Divider,
+  TrustSection,
+  TrustContent,
+  TrustList,
+  CallToActionSection,
 } from "./Home.style";
 import heroImage from "../../assets/images/heroimage.jpg";
 import servicesHelpImage from "../../assets/images/Services-Help.jpg";
@@ -17,22 +21,22 @@ import serviceDigitalMarketing from "../../assets/images/Services-Marketing.jpg"
 // Services displayed on the home page, including their descriptions and links
 const services = [
   {
-    name: "Admistrative Help",
-    descreiption:
+    name: "Administrative Help",
+    description:
       "HR services, accounting and customer support for smoother everyday operations",
     href: "/administrative-help",
     src: servicesHelpImage,
   },
   {
     name: "Workforce",
-    descreiption:
+    description:
       "Recruiting, work permits, visas, accreditation, training and rent-a-worker support.",
     href: "/workforce",
     src: servicesServicesWorkforce,
   },
   {
     name: "Digital Marketing",
-    descreiption:
+    description:
       "Website creation and social media support to help your business move forward.",
     href: "/digital-marketing",
     src: serviceDigitalMarketing,
@@ -40,6 +44,12 @@ const services = [
 ];
 
 // Key benefits displayed on the home page
+const benefits = [
+  "Flexible",
+  "Practical",
+  "Personalized",
+  "All-in-one support",
+];
 
 const Home = () => {
   return (
@@ -72,7 +82,7 @@ const Home = () => {
             <ServiceCard
               key={service.href}
               name={service.name}
-              description={service.descreiption}
+              description={service.description}
               href={service.href}
               linkLabel="Learn More"
               img={{
@@ -83,6 +93,31 @@ const Home = () => {
           ))}
         </ServiceGrid>
       </Section>
+
+      <TrustSection>
+        <TrustContent>
+          <div>
+            <SectionEyebrow>Why choose Nerrea?</SectionEyebrow>
+            <Divider />
+            <h2>One partner for everyday business challenges.</h2>
+            <a href="/about">Discover our approach</a>
+          </div>
+          <TrustList>
+            {benefits.map((benefit) => (
+              <li key={benefit}>
+                {benefit} <span>✓</span>
+              </li>
+            ))}
+          </TrustList>
+        </TrustContent>
+      </TrustSection>
+
+      <CallToActionSection>
+        <SectionEyebrow>Ready when you are</SectionEyebrow>
+        <h2>Need help with your business?</h2>
+        <p>Tell us what you need. NERREA can help.</p>
+        <a href="/contact">Contact Us</a>
+      </CallToActionSection>
     </HomePageContainer>
   );
 };
