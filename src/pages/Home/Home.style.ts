@@ -1,18 +1,8 @@
 import styled from "styled-components";
+import { Section } from "../../components/Layout/Layout.style";
 
 export const HomePageContainer = styled.div`
   overflow: hidden;
-`;
-
-export const Section = styled.section`
-  width: min(100% - 3rem, 1200px);
-  margin: 0 auto;
-  padding: clamp(3rem, 8vw, 7rem) 0;
-  border-bottom: 1px solid var(--color-border);
-
-  @media (max-width: 768px) {
-    width: min(100% - 2rem, 1200px);
-  }
 `;
 
 export const SectionHeader = styled.div`

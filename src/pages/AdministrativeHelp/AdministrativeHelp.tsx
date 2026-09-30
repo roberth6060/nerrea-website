@@ -1,6 +1,14 @@
 import Hero from "../../components/Hero/hero";
-import { AdministrativePage, Section } from "./AdministrativeHelp.style";
+import {
+  AdministrativePage,
+  Section,
+  SupportSection,
+  SectionHeader,
+  SectionEyebrow,
+  ServiceGrid,
+} from "./AdministrativeHelp.style";
 import supportImage from "../../assets/images/Services-Help.jpg";
+import ServiceCard from "../../components/ServiceCard/ServiceCard";
 
 // Admin info :
 const administrativeServices = [
@@ -43,6 +51,29 @@ const AdministrativeHelp = () => {
           }}
         />
       </Section>
+
+      <Section>
+        <SectionHeader>
+          <SectionEyebrow>Administration made simple</SectionEyebrow>
+          <h2>Practical support for the work behind your business.</h2>
+        </SectionHeader>
+
+        <ServiceGrid>
+          {administrativeServices.map((service) => (
+            <ServiceCard
+              key={service.name}
+              name={service.name}
+              description={service.description}
+              href={service.href}
+              linkLabel="Learn More"
+            />
+          ))}
+        </ServiceGrid>
+      </Section>
+
+      <SupportSection>
+        <p>Support me please</p>
+      </SupportSection>
     </AdministrativePage>
   );
 };
