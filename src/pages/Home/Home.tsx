@@ -1,13 +1,6 @@
 import Hero from "../../components/Hero/hero";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import {
-  HomePageContainer,
-  Section,
-  SectionEyebrow,
-  SectionHeader,
-  SectionSubtitle,
-  ServiceGrid,
-  Divider,
   TrustSection,
   TrustContent,
   TrustList,
@@ -17,6 +10,15 @@ import heroImage from "../../assets/images/heroimage.jpg";
 import servicesHelpImage from "../../assets/images/Services-Help.jpg";
 import servicesServicesWorkforce from "../../assets/images/Services-Workforce.jpg";
 import serviceDigitalMarketing from "../../assets/images/Services-Marketing.jpg";
+import {
+  Divider,
+  PageContainer,
+  Section,
+  SectionEyebrow,
+  SectionHeader,
+  SectionSubtitle,
+  ServiceGrid,
+} from "../../components/Layout/Layout.style";
 
 // Services displayed on the home page, including their descriptions and links
 const services = [
@@ -53,7 +55,7 @@ const benefits = [
 
 const Home = () => {
   return (
-    <HomePageContainer>
+    <PageContainer>
       <Section>
         <Hero
           heading="Your virtual assistant for business"
@@ -118,7 +120,7 @@ const Home = () => {
         <p>Tell us what you need. NERREA can help.</p>
         <a href="/contact">Contact Us</a>
       </CallToActionSection>
-    </HomePageContainer>
+    </PageContainer>
   );
 };
 

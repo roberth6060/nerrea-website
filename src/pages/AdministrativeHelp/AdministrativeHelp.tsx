@@ -1,14 +1,14 @@
 import Hero from "../../components/Hero/hero";
-import {
-  AdministrativePage,
-  Section,
-  SupportSection,
-  SectionHeader,
-  SectionEyebrow,
-  ServiceGrid,
-} from "./AdministrativeHelp.style";
+import { SupportSection } from "./AdministrativeHelp.style";
 import supportImage from "../../assets/images/Services-Help.jpg";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
+import {
+  PageContainer,
+  Section,
+  SectionEyebrow,
+  SectionHeader,
+  ServiceGrid,
+} from "../../components/Layout/Layout.style";
 
 // Admin info :
 const administrativeServices = [
@@ -34,7 +34,7 @@ const administrativeServices = [
 
 const AdministrativeHelp = () => {
   return (
-    <AdministrativePage>
+    <PageContainer>
       <Section>
         <Hero
           heading="Administrative help for your business"
@@ -74,7 +74,7 @@ const AdministrativeHelp = () => {
       <SupportSection>
         <p>Support me please</p>
       </SupportSection>
-    </AdministrativePage>
+    </PageContainer>
   );
 };
 
