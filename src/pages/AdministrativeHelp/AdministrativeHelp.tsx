@@ -1,9 +1,11 @@
 import Hero from "../../components/Hero/hero";
-import { SupportSection } from "./AdministrativeHelp.style";
+import { SupportSection, SupportContent } from "./AdministrativeHelp.style";
 import supportImage from "../../assets/images/Services-Help.jpg";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import {
+  CallToActionSection,
   PageContainer,
+  PrimaryButton,
   Section,
   SectionEyebrow,
   SectionHeader,
@@ -16,19 +18,16 @@ const administrativeServices = [
     name: "HR Services",
     description:
       "Support with employee administration, documentation and everyday HR tasks.",
-    href: "/contact",
   },
   {
     name: "Accounting",
     description:
       "Practical assistance with records, invoices and recurring administrative work.",
-    href: "/contact",
   },
   {
     name: "Customer Support",
     description:
       "Reliable customer communication and support that keeps your business responsive.",
-    href: "/contact",
   },
 ];
 
@@ -41,8 +40,8 @@ const AdministrativeHelp = () => {
           supportingText="Let NERREA handle the administrative work while you focus on your business."
           ctas={[
             {
-              label: "Contact Us",
-              href: "/contact",
+              label: "Explore our services",
+              href: "#admin-services",
             },
           ]}
           image={{
@@ -52,7 +51,7 @@ const AdministrativeHelp = () => {
         />
       </Section>
 
-      <Section>
+      <Section id="admin-services">
         <SectionHeader>
           <SectionEyebrow>Administration made simple</SectionEyebrow>
           <h2>Practical support for the work behind your business.</h2>
@@ -64,16 +63,28 @@ const AdministrativeHelp = () => {
               key={service.name}
               name={service.name}
               description={service.description}
-              href={service.href}
-              linkLabel="Learn More"
             />
           ))}
         </ServiceGrid>
       </Section>
 
       <SupportSection>
-        <p>Support me please</p>
+        <SupportContent>
+          <img src={supportImage} alt="Business support team work" />
+          <SectionEyebrow>Administration made simple</SectionEyebrow>
+          <h2>More time for the work only you can do.</h2>
+          <p>
+            NERREA takes repetitive administrative work off your plate with
+            flexible support that fits the way your business operates.
+          </p>
+        </SupportContent>
       </SupportSection>
+
+      <CallToActionSection>
+        <SectionEyebrow>Need administrative support?</SectionEyebrow>
+        <h2>Tell us what your business needs.</h2>
+        <PrimaryButton href="/contact">Contact NERREA</PrimaryButton>
+      </CallToActionSection>
     </PageContainer>
   );
 };

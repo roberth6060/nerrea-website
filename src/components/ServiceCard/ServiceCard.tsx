@@ -21,9 +21,11 @@ const ServiceCard = ({
       <ServiceCardContent>
         <ServiceCardTitle>{name}</ServiceCardTitle>
         <ServiceCardDescription>{description}</ServiceCardDescription>
-        <ServiceCardLink href={href}>
-          {linkLabel ?? `Explore ${name}`}
-        </ServiceCardLink>
+        {href && (
+          <ServiceCardLink href={href}>
+            {linkLabel ?? `Explore ${name}`}
+          </ServiceCardLink>
+        )}
       </ServiceCardContent>
     </ServiceCardContainer>
   );
