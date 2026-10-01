@@ -11,7 +11,7 @@ export type ServiceCta = {
 export type ServiceCardProps = {
   name: string;
   description: string;
-  href: string;
+  href?: string;
   linkLabel?: string;
   img?: ServiceImage;
 };

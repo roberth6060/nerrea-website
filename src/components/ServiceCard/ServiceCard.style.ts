@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { PrimaryButton } from "../Layout/Layout.style";
 
 export const ServiceCardContainer = styled.article`
   display: grid;
@@ -45,19 +46,6 @@ export const ServiceCardDescription = styled.p`
   margin-bottom: 0.75rem;
 `;
 
-export const ServiceCardLink = styled.a`
+export const ServiceCardLink = styled(PrimaryButton)`
   align-self: flex-start;
-  background-color: var(--color-primary);
-  color: #ffffff;
-  padding: 0.7rem 1rem;
-  border-radius: 1.2rem;
-  font-weight: 700;
-  transition:
-    background-color 0.2s ease,
-    transform 0.2s ease;
-
-  &:hover {
-    background-color: var(--color-primary-hover);
-    transform: translateY(-2px);
-  }
 `;

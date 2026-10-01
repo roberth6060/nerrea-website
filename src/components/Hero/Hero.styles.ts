@@ -16,18 +16,12 @@ export const HeroContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+`;
 
-  a {
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-    margin-right: 0.75rem;
-    padding: 0.75rem 1.25rem;
-    border-radius: 6px;
-    background: var(--color-primary);
-    color: #ffffff;
-    font-weight: 700;
-  }
+export const HeroActions = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 `;
 
 export const HeroPicture = styled.picture`

@@ -1,22 +1,22 @@
 import Hero from "../../components/Hero/hero";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
+import { TrustSection, TrustContent, TrustList } from "./Home.style";
+import heroImage from "../../assets/images/heroimage.jpg";
+import servicesHelpImage from "../../assets/images/Services-Help.jpg";
+import servicesServicesWorkforce from "../../assets/images/Services-Workforce.jpg";
+import serviceDigitalMarketing from "../../assets/images/Services-Marketing.jpg";
 import {
-  HomePageContainer,
+  ArrowLink,
+  CallToActionSection,
+  Divider,
+  PageContainer,
+  PrimaryButton,
   Section,
   SectionEyebrow,
   SectionHeader,
   SectionSubtitle,
   ServiceGrid,
-  Divider,
-  TrustSection,
-  TrustContent,
-  TrustList,
-  CallToActionSection,
-} from "./Home.style";
-import heroImage from "../../assets/images/heroimage.jpg";
-import servicesHelpImage from "../../assets/images/Services-Help.jpg";
-import servicesServicesWorkforce from "../../assets/images/Services-Workforce.jpg";
-import serviceDigitalMarketing from "../../assets/images/Services-Marketing.jpg";
+} from "../../components/Layout/Layout.style";
 
 // Services displayed on the home page, including their descriptions and links
 const services = [
@@ -53,15 +53,12 @@ const benefits = [
 
 const Home = () => {
   return (
-    <HomePageContainer>
+    <PageContainer>
       <Section>
         <Hero
           heading="Your virtual assistant for business"
           supportingText="Administrative, workforce and digital support."
-          ctas={[
-            { label: "Our services", href: "#services" },
-            { label: "Contact us", href: "/contact" },
-          ]}
+          ctas={[{ label: "Our services", href: "#services" }]}
           image={{
             src: heroImage,
             alt: "Professionals working together in a bright office",
@@ -100,7 +97,7 @@ const Home = () => {
             <SectionEyebrow>Why choose Nerrea?</SectionEyebrow>
             <Divider />
             <h2>One partner for everyday business challenges.</h2>
-            <a href="/about">Discover our approach</a>
+            <ArrowLink href="/about">Discover our approach</ArrowLink>
           </div>
           <TrustList>
             {benefits.map((benefit) => (
@@ -116,9 +113,9 @@ const Home = () => {
         <SectionEyebrow>Ready when you are</SectionEyebrow>
         <h2>Need help with your business?</h2>
         <p>Tell us what you need. NERREA can help.</p>
-        <a href="/contact">Contact Us</a>
+        <PrimaryButton href="/contact">Contact Us</PrimaryButton>
       </CallToActionSection>
-    </HomePageContainer>
+    </PageContainer>
   );
 };
 

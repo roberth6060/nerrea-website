@@ -1,10 +1,12 @@
 import {
+  HeroActions,
   HeroContainer,
   HeroContent,
   HeroImage,
   HeroPicture,
 } from "./Hero.styles";
 import type { HeroProps } from "./Hero.types";
+import { PrimaryButton } from "../Layout/Layout.style";
 
 const Hero = ({ heading, supportingText, ctas = [], image }: HeroProps) => {
   return (
@@ -13,13 +15,13 @@ const Hero = ({ heading, supportingText, ctas = [], image }: HeroProps) => {
         <h1>{heading}</h1>
         {supportingText && <p>{supportingText}</p>}
         {ctas.length > 0 && (
-          <div>
+          <HeroActions>
             {ctas.map((cta) => (
-              <a key={cta.href} href={cta.href}>
+              <PrimaryButton key={cta.href} href={cta.href}>
                 {cta.label}
-              </a>
+              </PrimaryButton>
             ))}
-          </div>
+          </HeroActions>
         )}
       </HeroContent>
 
