@@ -1,11 +1,17 @@
 import Hero from "../../components/Hero/hero";
 import workforceImage from "../../assets/images/Services-Workforce.jpg";
 import {
+  CallToActionSection,
   PageContainer,
   Section,
   SectionEyebrow,
 } from "../../components/Layout/Layout.style";
-import { ServiceHeader } from "./Workfoce.style";
+import {
+  ControlSection,
+  ProcessBand,
+  ProcessContent,
+  ServiceHeader,
+} from "./Workfoce.style";
 
 const workforceServices = [
   {
@@ -103,6 +109,21 @@ const Workforce = () => {
           ))}
         </ul>
       </Section>
+
+      <ProcessBand>
+        <ProcessContent>
+          <SectionEyebrow>How It Works</SectionEyebrow>
+          <h2>A clear process. Support that fits your needs.</h2>
+        </ProcessContent>
+      </ProcessBand>
+
+      <ControlSection>
+        <h2>Choose the support your business needs</h2>
+      </ControlSection>
+
+      <CallToActionSection>
+        <h2>Tell us about your workforce needs</h2>
+      </CallToActionSection>
     </PageContainer>
   );
 };
