@@ -17,6 +17,8 @@ import {
   ControlSection,
   ProcessBand,
   ProcessContent,
+  ProcessGrid,
+  ProcessStep,
   ServiceHeader,
 } from "./Workfoce.style";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
@@ -128,8 +130,20 @@ const Workforce = () => {
 
       <ProcessBand>
         <ProcessContent>
-          <SectionEyebrow>How It Works</SectionEyebrow>
-          <h2>A clear process. Support that fits your needs.</h2>
+          <div>
+            <SectionEyebrow>How It Works</SectionEyebrow>
+            <h2>A clear process. Support that fits your needs.</h2>
+          </div>
+
+          <ProcessGrid>
+            {processSteps.map((process) => (
+              <ProcessStep key={process.number}>
+                <span>{process.number}</span>
+                <h3>{process.title}</h3>
+                <p>{process.description}</p>
+              </ProcessStep>
+            ))}
+          </ProcessGrid>
         </ProcessContent>
       </ProcessBand>
 

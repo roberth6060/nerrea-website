@@ -8,3 +8,7 @@ export const ProcessBand = styled(Section)``;
 export const ProcessContent = styled.div``;
 
 export const ControlSection = styled(Section)``;
+
+export const ProcessGrid = styled.div``;
+
+export const ProcessStep = styled.div``;
