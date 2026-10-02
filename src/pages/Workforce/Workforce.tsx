@@ -5,6 +5,7 @@ import {
   PageContainer,
   Section,
   SectionEyebrow,
+  ServiceGrid,
 } from "../../components/Layout/Layout.style";
 import {
   ControlSection,
@@ -94,7 +95,7 @@ const Workforce = () => {
         />
       </Section>
 
-      <Section>
+      <Section id="workforce-services">
         <ServiceHeader>
           <SectionEyebrow>Workforce Services</SectionEyebrow>
           <h2>Specialist support, when and where you need it</h2>
@@ -103,11 +104,11 @@ const Workforce = () => {
             stages of your workforce process
           </p>
         </ServiceHeader>
-        <ul>
+        <ServiceGrid>
           {workforceServices.map((service) => (
             <li key={service.name}>{service.name}</li>
           ))}
-        </ul>
+        </ServiceGrid>
       </Section>
 
       <ProcessBand>
