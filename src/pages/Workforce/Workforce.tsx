@@ -1,5 +1,11 @@
 import Hero from "../../components/Hero/hero";
 import workforceImage from "../../assets/images/Services-Workforce.jpg";
+import recruitingImage from "../../assets/images/workforce/recruiting.jpg";
+import workPermitImage from "../../assets/images/workforce/work-permit.jpg";
+import accreditationImage from "../../assets/images/workforce/Philippines-Accreditation.jpg";
+import visaProcessImage from "../../assets/images/workforce/Work-Permit-Visa-Process.jpg";
+import trainingImage from "../../assets/images/workforce/Personnel-Training.jpg";
+import rentWorkerImage from "../../assets/images/workforce/Rent-a-Worker.jpg";
 import {
   CallToActionSection,
   PageContainer,
@@ -13,43 +19,44 @@ import {
   ProcessContent,
   ServiceHeader,
 } from "./Workfoce.style";
+import ServiceCard from "../../components/ServiceCard/ServiceCard";
 
 const workforceServices = [
   {
-    number: "01",
     name: "Recruiting",
     description:
       "Get support defining your needs, finding suitable candidates, and coordinating the recruitment process.",
+    image: recruitingImage,
   },
   {
-    number: "02",
     name: "Croatian Work Permit & HZZ Process",
     description:
       "Guidance with process steps, required information, and document preparation.",
+    image: workPermitImage,
   },
   {
-    number: "03",
     name: "Philippine Employer Accreditation",
     description:
       "Assistance organizing employer information and supporting documentation.",
+    image: accreditationImage,
   },
   {
-    number: "04",
     name: "Work Permit & Visa Process",
     description:
       "Practical help organizing requirements and navigating the steps for work permits and visas.",
+    image: visaProcessImage,
   },
   {
-    number: "05",
     name: "Personnel Training",
     description:
       "Training support to help prepare employees for their roles and workplace expectations.",
+    image: trainingImage,
   },
   {
-    number: "06",
     name: "Rent a Worker",
     description:
       "Flexible workforce support when your business needs additional people.",
+    image: rentWorkerImage,
   },
 ];
 
@@ -106,7 +113,15 @@ const Workforce = () => {
         </ServiceHeader>
         <ServiceGrid>
           {workforceServices.map((service) => (
-            <li key={service.name}>{service.name}</li>
+            <ServiceCard
+              key={service.name}
+              name={service.name}
+              description={service.description}
+              img={{
+                src: service.image,
+                alt: `${service.name} service`,
+              }}
+            />
           ))}
         </ServiceGrid>
       </Section>
