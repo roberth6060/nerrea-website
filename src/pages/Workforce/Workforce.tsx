@@ -9,6 +9,7 @@ import rentWorkerImage from "../../assets/images/workforce/Rent-a-Worker.jpg";
 import {
   CallToActionSection,
   PageContainer,
+  PrimaryButton,
   Section,
   SectionEyebrow,
   ServiceGrid,
@@ -148,11 +149,20 @@ const Workforce = () => {
       </ProcessBand>
 
       <ControlSection>
-        <h2>Choose the support your business needs</h2>
+        <SectionEyebrow>You stay in control. We assist.</SectionEyebrow>
+        <h2>Choose the support your business needs.</h2>
+        <p>
+          NERREA offers an alternative to handing the entire process to an
+          agency. You decide what to manage and where you need practical
+          assistance.
+        </p>
       </ControlSection>
 
       <CallToActionSection>
-        <h2>Tell us about your workforce needs</h2>
+        <SectionEyebrow>Ready to get started?</SectionEyebrow>
+        <h2>Tell us about your workforce needs.</h2>
+        <p>We can help you identify the right next step for your business.</p>
+        <PrimaryButton href="/contact">Get assistance</PrimaryButton>
       </CallToActionSection>
     </PageContainer>
   );
