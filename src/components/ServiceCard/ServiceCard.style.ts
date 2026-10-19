@@ -21,14 +21,8 @@ export const ServiceCardContainer = styled.article`
 export const ServiceCardImage = styled.img`
   display: block;
   width: 100%;
-  height: 100%;
-  min-height: 260px;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
-
-  @media (max-width: 680px) {
-    height: 220px;
-    min-height: 0;
-  }
 `;
 
 export const ServiceCardContent = styled.div`
