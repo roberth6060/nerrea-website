@@ -5,13 +5,14 @@ import {
   PrimaryButton,
   Section,
   SectionEyebrow,
-  ServiceGrid,
+  SectionHeader,
 } from "../../components/Layout/Layout.style";
 import marketingImage from "../../assets/images/Services-Marketing.jpg";
 import {
-  ServiceHeader,
-  ServiceCard,
   DigitalSupport,
+  DigitalSupportContent,
+  DigitalServiceCard,
+  DigitalServiceGrid,
 } from "./DigitalMarketing.style";
 
 const services = [
@@ -47,31 +48,28 @@ const DigitalMarketing = () => {
       </Section>
 
       <Section id="digital-services">
-        <ServiceHeader>
+        <SectionHeader>
           <SectionEyebrow>Digital marketing</SectionEyebrow>
           <h2>Make your business easier to find and remember.</h2>
           <p>
             Focused digital support for the two places customers often meet your
             business first: your website and social channels.
           </p>
-        </ServiceHeader>
+        </SectionHeader>
 
-        <ServiceGrid>
+        <DigitalServiceGrid>
           {services.map((service) => (
-            <ServiceCard key={service.id}>
-              <span>{service.name}</span>
-              <h3>Make your business easier to find and remember.</h3>
-              <p>
-                Focused digital support for the two places customers often meet
-                your business first: your website and social channels.
-              </p>
-            </ServiceCard>
+            <DigitalServiceCard key={service.id}>
+              <span>{service.number}</span>
+              <h3>{service.name}</h3>
+              <p>{service.description}</p>
+            </DigitalServiceCard>
           ))}
-        </ServiceGrid>
+        </DigitalServiceGrid>
       </Section>
 
       <DigitalSupport>
-        <DigitalSupport>
+        <DigitalSupportContent>
           <div>
             <SectionEyebrow>Your business. Online.</SectionEyebrow>
             <h2>A professional presence, built around your business.</h2>
@@ -82,7 +80,7 @@ const DigitalMarketing = () => {
             website that works across devices to social content that stays
             consistent with your brand.
           </p>
-        </DigitalSupport>
+        </DigitalSupportContent>
       </DigitalSupport>
 
       <CallToActionSection id="digital-contact">
